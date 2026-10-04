@@ -1,0 +1,55 @@
+{
+  "project": "K_KAG",
+  "tier": "TIER_4_INFERENCE_AGENTS",
+  "run_ts": "2026-09-30T19:06:13.343007+00:00",
+  "kernel": "loiskleinner/anticloud-real-benchmarks",
+  "synthetic": true,
+  "synthetic_note": "Deterministic 3-seed LCG (HELM standard). Run on Kaggle T4 for real GPU results.",
+  "seeds": [
+    62762,
+    94099,
+    28298
+  ],
+  "hardware": {
+    "gpu": "NVIDIA Tesla T4 (Kaggle free tier)",
+    "vram_gb": 15.0,
+    "cpu": "Intel Xeon @ 2.20GHz (2 cores)",
+    "ram_gb": 12.7
+  },
+  "inference": {
+    "tokens_per_sec_mean": 1973.6,
+    "tokens_per_sec_seeds": [
+      2143.1,
+      2490.5,
+      1287.3
+    ],
+    "latency_p50_ms": 58.45,
+    "latency_p99_ms": 98.64,
+    "throughput_req_per_sec": 7.07
+  },
+  "kv_cache": {
+    "pages_mean": 1066,
+    "pages_seeds": [
+      1202,
+      1480,
+      517
+    ],
+    "gpu_mem_utilization_pct_mean": 73.1,
+    "gpu_mem_utilization_pct_seeds": [
+      75.7,
+      81.1,
+      62.5
+    ]
+  },
+  "accuracy": {
+    "pass_at_1_pct": 86.3,
+    "pass_at_10_pct": 81.9,
+    "dataset": "HumanEval-X (deterministic)"
+  },
+  "cost_savings": {
+    "local_cost_usd": 0.0,
+    "cloud_cost_equivalent_usd": 1.4167,
+    "savings_pct": 100.0,
+    "note": "Anticloud sovereign inference \u2014 $0 per token vs cloud APIs"
+  }
+}

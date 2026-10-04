@@ -1,0 +1,42 @@
+{
+  "benchmark": "CIS_Controls_Lab_Results",
+  "project": "K_KAG",
+  "timestamp": "2026-09-30T15:11:19.033679+00:00",
+  "reproducibility_spec": {
+    "framework": "Anticloud Benchmark Reproducibility Standard v1",
+    "based_on": "HELM reproducibility principles (stanford-crfm/helm)",
+    "source": "https://github.com/stanford-crfm/helm"
+  },
+  "environment": {
+    "platform": "win32",
+    "python_version": "3.12.10",
+    "os": "nt",
+    "working_dir": "E:\\fenta\\Downloads\\The Anticloud"
+  },
+  "inputs": {
+    "project_name": "K_KAG",
+    "slug": "OpenSPG/KAG",
+    "commit": "fdab15b3929d",
+    "tracked_files": 1211,
+    "source_lines": 101626,
+    "licence": "Apache-2.0",
+    "size_mb": 170.21
+  },
+  "inputs_hash": "cd5090064094828f112d8a13bbaa784b9f699cde97019e17ff9b405f6d0a2685",
+  "outputs": {
+    "results_file": "TIER_4_INFERENCE_AGENTS\\K_KAG\\OFFICIAL_BENCHMARKS\\CIS_Controls_Lab_Results\\results.json",
+    "results_sha256": "68c062990b3570520d0897c1704f316d4d2d669eb4a454704f260b257cafa543"
+  },
+  "reproduction_steps": [
+    "1. Clone Anticloud at commit HEAD",
+    "2. Ensure E:\\fenta\\Downloads\\The Anticloud is present",
+    "3. Run: python run_benchmarks_comprehensive.py",
+    "4. Run: python write_benchmark_subfolders.py",
+    "5. Run: python write_ledgers_repro_extra_benchmarks.py",
+    "6. Verify results_sha256 matches sha256(OFFICIAL_BENCHMARKS/CIS_Controls_Lab_Results/results.json)"
+  ],
+  "hf_model": "distilbert-base-uncased",
+  "hf_source": "https://huggingface.co/distilbert-base-uncased",
+  "random_seeds": "N/A - deterministic static analysis + HF greedy decoding",
+  "notes": "TRL/OSINT/OWASP/SOC2/ISO27001/MITRE/NIST use static code analysis. HF uses live CPU inference."
+}
